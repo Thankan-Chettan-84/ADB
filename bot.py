@@ -1,5 +1,5 @@
 from aiohttp import web
-import web_server
+from __init__ import web_server
 
 import asyncio
 from os import environ
