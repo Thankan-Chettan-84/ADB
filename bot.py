@@ -45,6 +45,8 @@ idle()
 Bot.stop()
 print("Bot Stopped!")
 PORT = 8080
+
+class Bot(Client):
 app = web.AppRunner(await web_server())
         await app.setup()
         bind_address = "0.0.0.0"
