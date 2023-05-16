@@ -1,7 +1,6 @@
 from aiohttp import web
 from __init__ import web_server
 
-import asyncio
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from pyrogram import types
