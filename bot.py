@@ -1,7 +1,9 @@
 from aiohttp import web
 from __init__ import web_server
 
-from pyrogram import Client, __version__
+import pyrogram
+from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
+from pyrogram import Client, __version__, filters, enums
 from pyrogram.raw.all import layer
 from pyrogram import types
 
