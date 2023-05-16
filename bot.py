@@ -9,12 +9,12 @@ API_ID = "1534768"
 API_HASH = "894f663e1e289f898208e3a26f798214" 
 BOT_TOKEN = "5400680150:AAHi_7wOeFhmUHDLc6jP3CynlSSg5hokUaE"
 
-TIME = "600" 
-GROUPS = "-1005932375960"
+TIME = "900" 
+GROUPS = "-1001886617690"
 ADMINS = "1276065476"
 
 
-START_MSG = "<b>Hai {},\nI'm a private bot of @mh_world to delete group messages after a specific time</b>"
+START_MSG = "<b>You Are Not Authorised To Use This Bot</b>"
 
 
 Bot = Client(name="auto-delete",
@@ -48,9 +48,3 @@ idle()
 Bot.stop()
 print("Bot Stopped!")
 PORT = 8080
-
-class Bot(Client):
-app = web.AppRunner(await web_server())
-      await app.setup()
-      bind_address = "0.0.0.0"
-      await web.TCPSite(app, bind_address, PORT).start()
