@@ -44,8 +44,11 @@ class Bot(Client):
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
-
-        
+   
+    async def stop(self, *args):
+        await super().stop()
+        print("Bot stopped. Bye.")
+            
         
 @Client.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
