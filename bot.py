@@ -18,21 +18,23 @@ START_MSG = "<b>You Are Not Authorised To Use This Bot</b>"
 
 
 class Bot(Client):
-  def __init__(self):
-      super().__init__(name="auto-delete",
-             api_id=API_ID,
-             api_hash=API_HASH,
-             bot_token=BOT_TOKEN,
-             workers=300
-             )
 
-  async def start(self)
+    def __init__(self):
+        super().__init__(
+            name=AUTODELETE,
+            api_id=API_ID,
+            api_hash=API_HASH,
+            bot_token=BOT_TOKEN,
+            workers=300
+        )
+
+    async def start(self):
         #web-response
         app = web.AppRunner(await web_server())
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
-
+        
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
