@@ -22,7 +22,6 @@ START_MSG = "<b>You Are Not Authorised To Use This Bot</b>"
 
 
 class Bot(Client):
-
     def __init__(self):
         super().__init__(
             name="autodelete",
@@ -110,9 +109,3 @@ async def delete(user, message):
         
 app = Bot()
 app.run()
-##print("Bot Started!")
-
-
-#Bot.stop()
-##print("Bot Stopped!")
-#PORT = 8080
