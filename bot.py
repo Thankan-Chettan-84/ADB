@@ -17,15 +17,16 @@ PORT = 8080
 START_MSG = "<b>You Are Not Authorised To Use This Bot</b>"
 
 
-Bot = Client(name="auto-delete",
+class Bot(Client):
+  def __init__(self):
+      super().__init__(name="auto-delete",
              api_id=API_ID,
              api_hash=API_HASH,
              bot_token=BOT_TOKEN,
              workers=300
              )
 
-class Bot1(Client):
-    async def start(self)
+  async def start(self)
         #web-response
         app = web.AppRunner(await web_server())
         await app.setup()
