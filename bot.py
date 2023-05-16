@@ -2,8 +2,10 @@ from aiohttp import web
 from __init__ import web_server
 
 import asyncio
-from os import environ
-from pyrogram import Client, filters, idle
+from pyrogram import Client, __version__
+from pyrogram.raw.all import layer
+from pyrogram import types
+
 
 API_ID = "1534768"
 API_HASH = "894f663e1e289f898208e3a26f798214" 
