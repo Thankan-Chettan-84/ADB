@@ -57,7 +57,7 @@ async def start(bot, message):
 async def delete(user, message):
     try:
        if message.from_user.id in ADMINS:
-          return
+        return
        else:
           await asyncio.sleep(TIME)
           await Bot.delete_messages(message.chat.id, message.id)
@@ -67,11 +67,12 @@ async def delete(user, message):
         
         
 app = Bot()
-app.run()
+app.start()
 print("Bot Started!")
 
-##idle()
+idle()
 
+app.stop()
 #Bot.stop()
-#print("Bot Stopped!")
+print("Bot Stopped!")
 #PORT = 8080
