@@ -37,7 +37,7 @@ class Bot(Client):
         await super().start()
         me = await self.get_me()
         self.username = '@' + me.username
-        logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
+        print(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         
         #web-response
         app = web.AppRunner(await web_server())
