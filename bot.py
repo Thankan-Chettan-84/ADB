@@ -24,6 +24,14 @@ Bot = Client(name="auto-delete",
              workers=300
              )
 
+class Bot1(Client):
+    async def start(self)
+        #web-response
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
+
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
