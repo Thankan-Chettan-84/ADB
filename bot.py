@@ -68,8 +68,8 @@ app = Bot()
 app.run()
 print("Bot Started!")
 
-idle()
+##idle()
 
-Bot.stop()
-print("Bot Stopped!")
-PORT = 8080
+#Bot.stop()
+#print("Bot Stopped!")
+#PORT = 8080
