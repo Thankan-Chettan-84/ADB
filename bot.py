@@ -12,7 +12,7 @@ BOT_TOKEN = "5400680150:AAHi_7wOeFhmUHDLc6jP3CynlSSg5hokUaE"
 TIME = "900" 
 GROUPS = "-1001886617690"
 ADMINS = "1276065476"
-
+PORT = 8080
 
 START_MSG = "<b>You Are Not Authorised To Use This Bot</b>"
 
