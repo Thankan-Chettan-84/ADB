@@ -49,11 +49,11 @@ class Bot(Client):
         print("Bot stopped. Bye.")
             
         
-@Client.on_message(filters.command('start') & filters.private)
+@Bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     await message.reply(START_MSG.format(message.from_user.mention))
 
-@Client.on_message(filters.chat(GROUPS) & filters.media)
+@Bot.on_message(filters.chat(GROUPS) & filters.media)
 async def delete(user, message):
     try:
        if message.from_user.id in ADMINS:
@@ -67,12 +67,10 @@ async def delete(user, message):
         
         
 app = Bot()
-app.start()
-print("Bot Started!")
+app.run()
+##print("Bot Started!")
 
-idle()
 
-app.stop()
 #Bot.stop()
-print("Bot Stopped!")
+##print("Bot Stopped!")
 #PORT = 8080
