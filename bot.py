@@ -50,8 +50,9 @@ async def delete(user, message):
           await Bot.delete_messages(message.chat.id, message.id)
     except Exception as e:
        print(e)
-       
-Bot.start()
+
+app = Bot()
+app.run()
 print("Bot Started!")
 
 idle()
