@@ -36,8 +36,26 @@ class Bot(Client):
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
-        
 
+        
+        
+@Client.on_message(filters.command('start') & filters.private)
+async def start(bot, message):
+    await message.reply(START_MSG.format(message.from_user.mention))
+
+@Client.on_message(filters.chat(GROUPS) & filters.media)
+async def delete(user, message):
+    try:
+       if message.from_user.id in ADMINS:
+          return
+       else:
+          await asyncio.sleep(TIME)
+          await Bot.delete_messages(message.chat.id, message.id)
+    except Exception as e:
+       print(e)
+
+        
+        
 app = Bot()
 app.run()
 print("Bot Started!")
